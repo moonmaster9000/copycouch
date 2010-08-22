@@ -7,6 +7,7 @@ Feature: Replicate a single document to a target database
     When I try to replicate a new (unsaved) document
     Then I should recieve an exception message informing that I am not allowed to do that
   
+  @run
   Scenario: Replication
     Given I have several documents in my source database
     And I have no documents in my target database
