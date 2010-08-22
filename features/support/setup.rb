@@ -2,7 +2,7 @@ require 'spec/expectations'
 $LOAD_PATH.unshift './lib'
 require 'copycouch'
 
-COUCHDB_SERVER            = CouchRest.new "http://admin:password@localhost:5984"
+COUCHDB_SERVER            = CouchRest.new "http://localhost:5984"
 COPYCOUCH_SOURCE_TEST_DB  = COUCHDB_SERVER.database!('copycouch_source_test')
 COPYCOUCH_DEST_TEST_DB    = COUCHDB_SERVER.database!('copycouch_dest_test')
 
