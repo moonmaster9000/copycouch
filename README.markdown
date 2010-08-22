@@ -18,6 +18,7 @@ First, mix CopyCouch into your CouchRest::Model::Base derived class:
       use CMS_DATABASE
   
       property :name
+      property :is_published, TrueClass
     end
 
 Next, create a document.
@@ -38,3 +39,9 @@ Now it's replicated. After replication, CopyCouch logged some stuff in your docu
     puts @book.last_replicated_on #==> Sun Aug 22 18:41:57 -0400 2010
 
 You could also find that information under `@book.copycouch_log`
+
+If you'd like to set and save some properties on your document right after replication, you can do the following
+    
+    @book.replicate(PRODUCTION_DATABASE) do |b|
+      b.is_published = true
+    end
