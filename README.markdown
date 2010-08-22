@@ -25,7 +25,7 @@ Next, create a document.
 
     @book = Book.create :name => "2001: A Space Odyssey"
 
-Next, replicte it!
+Next, replicate it!
 
     PRODUCTION_COUCH_SERVER = CouchRest.new "http://my.production.couch.instance"
     PRODUCTION_DATABASE = PRODUCTION_COUCH_SERVER.database! 'library'
