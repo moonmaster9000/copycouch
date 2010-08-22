@@ -1,0 +1,5 @@
+pkg/
+pkg/*
+*.gemspec
+*.swp
+log/*
