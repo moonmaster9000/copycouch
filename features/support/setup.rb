@@ -16,8 +16,8 @@ class Book < CouchRest::Model::Base
 end
 
 After do |scenario|
-  # COPYCOUCH_SOURCE_TEST_DB.delete!
-  # COPYCOUCH_DEST_TEST_DB.delete!
-  # COPYCOUCH_SOURCE_TEST_DB.create!
-  # COPYCOUCH_DEST_TEST_DB.create!
+  COPYCOUCH_SOURCE_TEST_DB.delete!
+  COPYCOUCH_DEST_TEST_DB.delete!
+  COPYCOUCH_SOURCE_TEST_DB.create!
+  COPYCOUCH_DEST_TEST_DB.create!
 end
